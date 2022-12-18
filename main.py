@@ -8,7 +8,6 @@ if __name__ == '__main__':
     # initialisation de pygame
     pygame.init()
     simulateur = Simulateur(12, (800, 600), "Simulateur - PPC")
-
     # calcul du resultat
     # ouverture du simulateur
     simulateur.current_scene.set_current_scene(Menu(simulateur))

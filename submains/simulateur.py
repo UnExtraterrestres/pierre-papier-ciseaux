@@ -28,15 +28,13 @@ class Simulateur:
         self.font = pygame.font.SysFont("monospace", 16)
         # scene courrante
         self.current_scene = Scene(self)
-        # ecran
-        self.screen = pygame.display.set_mode(size)
-        pygame.display.set_caption(title)
-        pygame.display.set_icon(pygame.image.load("assets/entities/papier.jpg"))
         # gestionnaires d'images et de sons
         self.img = ImageManager()
         self.sounds = SoundManager()
-
-        self.screen.get_width()
+        # ecran
+        self.screen = pygame.display.set_mode(size)
+        pygame.display.set_caption(title)
+        pygame.display.set_icon(self.img.images.get("papier"))
 
     def run(self):
         # lance la boucle de jeu
