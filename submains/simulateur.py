@@ -2,6 +2,7 @@
 import pygame.display
 
 from .scene import *
+from .tools.parametres import Settings
 
 
 """
@@ -31,8 +32,10 @@ class Simulateur:
         # gestionnaires d'images et de sons
         self.img = ImageManager()
         self.sounds = SoundManager()
+        # autres parametres
+        self.settings = Settings(self)
         # ecran
-        self.screen = pygame.display.set_mode(size)
+        self.screen = pygame.display.set_mode(size, pygame.RESIZABLE)
         pygame.display.set_caption(title)
         pygame.display.set_icon(self.img.images.get("papier"))
 
@@ -54,7 +57,7 @@ class Simulateur:
     # entree : coord
     # entree : color
     def pin_up(self, text: str, coord: tuple, color=(0, 0, 0)):
-        # affiche text en color a la position coord de l'ecran
+        # affiche text en color à la position coord de l'ecran
 
         # declaration de la donnee
         txt = self.font.render(text, True, color)
