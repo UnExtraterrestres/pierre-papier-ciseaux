@@ -1,7 +1,7 @@
 # pierre-papier-ciseaux
 des pierres papiers et ciseaux apparaissent dans une fenêtre, à la fin il ne restera qu'un signe...
 
-#Auteur
+# Auteur
 UnExtraterrestres
 
 # Comment lancer la simulation ?
