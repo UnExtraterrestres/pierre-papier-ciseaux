@@ -1,5 +1,5 @@
 # importation
-import _tkinter
+import tkinter
 
 from .tools.mediamanager import *
 from .tools.application.application import *
